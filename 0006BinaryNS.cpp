@@ -1,9 +1,6 @@
 #include<iostream>
 using namespace std;
-int main(){
-    cout<<"Enter a number ";
-    int n;
-    cin>>n;
+int decimalToBinary(int n){
     int pow=1;
     int binNum=0;
     while (n>0){
@@ -12,6 +9,15 @@ int main(){
         n/=2;
         pow*=10;
     }
-    cout<<"\nBinary number of "<<n<<" is "<<binNum<<"\n";
+    return binNum;
+}
+int main(){
+    cout<<"Enter a number ";
+    int n;
+    cin>>n;
+    for (int i=1;i<=n;i++){
+        int b=decimalToBinary(i);
+        cout<<"Decimal "<<i<<" = "<<b<<"\n";
+    }
     return 0;
 }
